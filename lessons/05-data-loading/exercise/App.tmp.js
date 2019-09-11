@@ -10,14 +10,14 @@ export default function App() {
 
   useEffect(() => {
     return onAuthStateChanged(auth => {
-      setAuthAttempted(true)
-      setAuth(auth)
+        setAuthAttempted(true)
+        setAuth(auth)
     })
-  }, [])
+  }, [auth])
 
-  if (!authAttempted) {
-    return <p>Authenticating...</p>
-  }
+  // if (!authAttempted) {
+  //   return <p>Authenticating...</p>
+  // }
 
   return (
     <div className="Layout">
